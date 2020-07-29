@@ -1,0 +1,18 @@
+.container {
+  padding: 0 1rem;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.contentContainer {
+  background: whitesmoke;
+  margin: 10px 0;
+  padding: 4rem 0;
+}

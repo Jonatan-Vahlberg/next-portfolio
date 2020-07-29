@@ -1,0 +1,15 @@
+.title {
+  padding: 4rem auto;
+  margin: 0 auto;
+  text-align: center;
+  /* text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 10px; */
+}
+.underline {
+  margin: 0 auto;
+  text-decoration: none;
+  border-bottom: 4.5px solid #212529;
+
+  width: 70px;
+}
