@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import styles from './AboutContainer.module.css';
 import Title from './Title';
+import HexagonImage from './HexagonImage';
 const AboutContainer: React.FC<{}> = (props) => {
   return (
     <>
       <Title name="About" />
-
+      <HexagonImage image="/images/pfp.jpg" height="400" width="200" centered={true} />
       <h5>Who am i?</h5>
 
       <p>
