@@ -28,3 +28,13 @@
   align-self: flex-end;
   width: 100%;
 }
+
+.listItemLink {
+  color: red;
+  color: var(--active-color);
+  transition: 0.3s;
+}
+
+.listItemLink:hover {
+  color: var(--hover-color);
+}

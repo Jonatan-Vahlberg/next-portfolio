@@ -25,3 +25,7 @@ img {
   max-width: 100%;
   display: block;
 }
+:root {
+  --active-color: #f4b607;
+  --hover-color: #c39206;
+}

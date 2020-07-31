@@ -1,0 +1,28 @@
+.iconContainer {
+  padding: 10px;
+  background-color: #282c34;
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.iconContainer a {
+  color: white;
+  transition: 0.3s;
+}
+
+.iconContainer a:hover {
+  background-color: #323741;
+  color: var(--active-color);
+}
+
+.iconContainer:last-child {
+  margin-right: 0px;
+}
+
+/* .iconContainer:hover {
+  background-color: #323741;
+  color: var(--active-color);
+} */

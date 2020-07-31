@@ -9,7 +9,7 @@ import Footer from './Footer';
 const name = 'Jonatan Vahlberg';
 export const siteTitle = 'Next.js Sample Website';
 
-const Layout: React.FC<{ home: boolean }> = ({ children, home }) => {
+const Layout: React.FC<{ home: boolean; title: string }> = ({ children, home, title }) => {
   return (
     <div className={styles.main}>
       <Head>
@@ -24,7 +24,7 @@ const Layout: React.FC<{ home: boolean }> = ({ children, home }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header selectedPage="about" name={name} />
+      <Header selectedPage={title} name={name} />
       <main>
         <HeroCover />
         <div className={styles.contentContainer}>{children}</div>
