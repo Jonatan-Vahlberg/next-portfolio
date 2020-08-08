@@ -4,9 +4,12 @@ import colors from '../../static/colors';
 import HeroCover from '../../components/HeroCover';
 import { Navbar } from 'react-bootstrap';
 import Layout from '../../components/Layout';
-import ProjectsContainer from '../../components/ProjectsContainer';
+import ProjectsContainer from '../../components/project/ProjectsContainer';
+import { GetStaticProps } from 'next';
+import { getProjectsData } from '../../lib/projects';
+import Project from '../../models/Project';
 
-export default function Projects() {
+const Projects: React.FC<{ projects: Project[] }> = (props) => {
   return (
     <div style={{ background: colors.background }}>
       <Head>
@@ -14,8 +17,21 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout title="projects" home={false}>
-        <ProjectsContainer />
+        <ProjectsContainer projects={props.projects} />
       </Layout>
     </div>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const allProjects = await getProjectsData();
+  console.log('PROJECTS: ', allProjects);
+
+  return {
+    props: {
+      projects: allProjects,
+    },
+  };
+};
+
+export default Projects;

@@ -22,7 +22,20 @@
   margin-right: 0px;
 }
 
-/* .iconContainer:hover {
-  background-color: #323741;
-  color: var(--active-color);
-} */
+.small {
+  background-color: transparent;
+  margin-right: 5;
+  padding: 0;
+}
+
+.small a {
+  color: #282c34;
+}
+
+.small a {
+  padding: 5;
+}
+
+.small a:hover {
+  background-color: transparent;
+}
