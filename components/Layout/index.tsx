@@ -1,17 +1,17 @@
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+import styles from './Layout.module.sass';
+import utilStyles from '../../styles/utils.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from './Header';
-import HeroCover from './HeroCover';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import HeroCover from '../HeroCover';
+import Footer from '../Footer';
 
 const name = 'Jonatan Vahlberg';
 export const siteTitle = 'Next.js Sample Website';
 
 const Layout: React.FC<{ home: boolean; title: string }> = ({ children, home, title }) => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main + ' container-fluid p-0'}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Learn how to build a personal website using node.js" />
@@ -25,10 +25,10 @@ const Layout: React.FC<{ home: boolean; title: string }> = ({ children, home, ti
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header selectedPage={title} name={name} />
-      <main>
+      <div className="" style={{ width: '100vw' }}>
         <HeroCover />
-        <div className={styles.contentContainer}>{children}</div>
-      </main>
+        <div className={`p-3 p-sm-5 ${styles.contentContainer}`}>{children}</div>
+      </div>
       <Footer />
     </div>
   );
