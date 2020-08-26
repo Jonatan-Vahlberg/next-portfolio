@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, HTMLAttributes } from 'react';
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 
-import styles from './Header.module.sass';
+import styles from './header.module.sass';
 import Link from 'next/link';
 
 interface HeaderProps {
