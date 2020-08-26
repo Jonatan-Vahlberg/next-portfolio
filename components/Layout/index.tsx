@@ -27,7 +27,7 @@ const Layout: React.FC<{ home: boolean; title: string }> = ({ children, home, ti
       <Header selectedPage={title} name={name} />
       <div className="" style={{ width: '100vw' }}>
         <HeroCover />
-        <div className={`p-3 p-sm-5 ${styles.contentContainer}`}>{children}</div>
+        <div className={`p-2 p-sm-5 ${styles.contentContainer}`}>{children}</div>
       </div>
       <Footer />
     </div>

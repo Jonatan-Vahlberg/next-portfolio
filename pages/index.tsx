@@ -4,7 +4,7 @@ import colors from '../static/colors';
 import HeroCover from '../components/HeroCover';
 import { Navbar } from 'react-bootstrap';
 import Layout from '../components/Layout';
-import AboutContainer from '../components/AboutContainer';
+import AboutContainer from '../components/about/AboutContainer';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           //@ts-ignore
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></link>
       </Head>
       <Layout title="about" home>

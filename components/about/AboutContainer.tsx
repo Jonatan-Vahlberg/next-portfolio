@@ -1,13 +1,17 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import styles from './AboutContainer.module.css';
-import Title from './Title';
-import HexagonImage from './HexagonImage';
+import Title from '../Title';
+import HexagonImage from '../HexagonImage';
+import AboutTable from './AboutTable';
 const AboutContainer: React.FC<{}> = (props) => {
   return (
-    <>
+    <div className="m-2 m-sm-0">
       <Title name="About" />
-      <HexagonImage image="/images/pfp.jpg" height="400" width="200" centered={true} />
+      <div className="my-3">
+        <img className="d-none d-sm-block border rounded-circle w-25 h-25 mx-auto  shadow-lg" src="/images/pfp.jpg" />
+        <img className="d-block d-sm-none border rounded-circle w-50 h-50 mx-auto shadow-lg" src="/images/pfp.jpg" />
+      </div>
       <h5>Who am i?</h5>
 
       <p>
@@ -19,38 +23,8 @@ const AboutContainer: React.FC<{}> = (props) => {
         My Main stack is a mix of React, React-Native, JS, TypeScript and Next.js. Outside of these i am also proficient in Kotlin/Java for android and have some experience in Swift for IOS. A full
         list of my skills are found below
       </p>
-      <Table variant="dark">
-        <thead>
-          <tr>
-            <th>Mobile</th>
-            <th>Web</th>
-            <th>Other</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>React-Native(Hybrid)</th>
-            <th>React</th>
-            <th>Git/GitFlow</th>
-          </tr>
-          <tr>
-            <th>Kotlin, Java (Android)</th>
-            <th>HTML, JS, CSS, SCSS</th>
-            <th>Node.js</th>
-          </tr>
-          <tr>
-            <th>Swift, XCode (IOS)</th>
-            <th>Next.js</th>
-            <th>Firebase suite, SQLite</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>TypeScript</th>
-            <th>UI Design</th>
-          </tr>
-        </tbody>
-      </Table>
-    </>
+      <AboutTable />
+    </div>
   );
 };
 
